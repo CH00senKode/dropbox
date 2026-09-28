@@ -1,0 +1,58 @@
+/* Exact animation method from the supplied banner: CSS, not Lottie. */
+@font-face {
+  font-family: "Atlas Grotesk Web";
+  src: url("../images/fonts/AtlasGrotesk-Regular-Web-vflk7bxjs.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atlas Grotesk Web";
+  src: url("../images/fonts/AtlasGrotesk-Medium-Web-vfl38XiTL.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.rocket {
+  width: 24px;
+  height: 24px;
+  flex: none;
+}
+
+.share-banner {
+  font-family: "Atlas Grotesk Web", Atlas, Arial, sans-serif;
+  line-height: 30px;
+  background: linear-gradient(90deg, #002969 0%, #002969 50%, #003a97 73%, #002969 94%);
+  border-radius: 12px;
+  background-size: 200% 200%;
+  animation: banner-shimmer 8s linear infinite;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.share-banner strong {
+  font-weight: 500;
+}
+
+.banner-close {
+  font-size: 0;
+  line-height: 0;
+}
+
+.banner-close svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes banner-shimmer {
+  0%, 20% { background-position: 200% 0; }
+  50%, 70% { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .share-banner { background: #002969; animation: none; }
+}

@@ -1,0 +1,178 @@
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #1a1918;
+  --line: #393535;
+}
+
+body {
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.action-card {
+  border: 1px solid transparent;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.action-card.pale:hover,
+.action-card.pale:focus-visible {
+  background: #e7e4e1;
+}
+
+.action-card.dark:hover,
+.action-card.dark:focus-visible {
+  background: #383434;
+}
+
+.action-card:focus-visible {
+  outline: 2px solid #7b91ff;
+  outline-offset: 2px;
+}
+
+:root[data-theme="dark"] body {
+  color: #f7f5f2;
+}
+
+:root[data-theme="dark"] .action-card.dark {
+  background: #1a1918;
+  border-color: #403b3b;
+  color: #f7f5f2;
+}
+
+:root[data-theme="dark"] .action-card.dark .card-icon svg {
+  filter: brightness(0) invert(1);
+}
+
+:root[data-theme="dark"] .action-card.dark:hover,
+:root[data-theme="dark"] .action-card.dark:focus-visible {
+  background: #302c2c;
+  border-color: #655e5e;
+}
+
+:root[data-theme="dark"] .table-head button,
+:root[data-theme="dark"] .table-head span,
+:root[data-theme="dark"] .file-name a {
+  color: #f7f5f2;
+}
+
+:root[data-theme="dark"] .file-row > span:not(.file-name) {
+  color: #b8b2b0;
+}
+
+:root[data-theme="dark"] .view-toggle {
+  background: #1a1918;
+  border-color: #655e5e;
+  color: #f7f5f2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .action-card {
+    transition: none;
+  }
+}
+
+/* Live Dropbox light-mode values. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --paper: #fff;
+  --line: rgba(0, 0, 0, .14);
+}
+
+:root[data-theme="light"] body { background: #fff; color: #1a1918; }
+:root[data-theme="light"] .topbar { background: #fff; color: #1a1918; border-bottom-color: #bbb5ae; }
+:root[data-theme="light"] .brand, :root[data-theme="light"] .icon-button { color: #1a1918; }
+:root[data-theme="light"] .login { background: rgba(179, 180, 196, .12); color: #1a1918; }
+:root[data-theme="light"] .signup { background: #1a1918; color: #f7f5f2; }
+
+:root[data-theme="light"] .share-banner {
+  background: linear-gradient(90deg, rgb(222, 235, 255) 0%, rgb(222, 235, 255) 50%, rgb(180, 209, 255) 73%, rgb(222, 235, 255) 94%);
+  color: #1a1918;
+}
+:root[data-theme="light"] .banner-login, :root[data-theme="light"] .banner-signup, :root[data-theme="light"] .banner-close { color: #1a1918; }
+:root[data-theme="light"] .banner-login { text-decoration-color: #bbb5ae; }
+:root[data-theme="light"] .banner-signup { border-color: #bbb5ae; }
+
+:root[data-theme="light"] [data-action="copy"] { background: #1a1918; border-color: #f7f5f2; color: #f7f5f2; }
+:root[data-theme="light"] [data-action="download"], :root[data-theme="light"] [data-action="copy-link"] { background: #fff; border-color: rgba(0, 0, 0, .14); color: #1a1918; }
+:root[data-theme="light"] .folder-heading h1, :root[data-theme="light"] .view-toggle { color: #1a1918; }
+:root[data-theme="light"] .view-toggle { background: transparent; border-color: transparent; }
+:root[data-theme="light"] .table-head > button { color: #736c64; }
+:root[data-theme="light"] .table-head > button:first-child { color: #1a1918; }
+:root[data-theme="light"] .table-head > button span { color: inherit; }
+:root[data-theme="light"] .file-row .file-name a { color: #1a1918 !important; }
+:root[data-theme="light"] .file-row > span:not(.file-name) { color: #1a1918; }
+:root[data-theme="light"] .bottom-report { color: #1a1918; }
+
+/* Light-mode icon and banner animation fixes. */
+:root[data-theme="light"] .share-banner {
+  background-size: 200% 200%;
+  animation: banner-shimmer 8s linear infinite;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+:root[data-theme="light"] .rocket { filter: brightness(0); }
+:root[data-theme="light"] [data-action="copy"] .lottie-icon { filter: brightness(0) invert(1); }
+
+/* Live light-mode Help menu. */
+:root[data-theme="light"] .help-menu {
+  background: #fff;
+  color: #1a1918;
+  border-color: rgba(0, 0, 0, .14);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .16);
+}
+:root[data-theme="light"] .help-menu a { color: #1a1918; }
+:root[data-theme="light"] .help-menu a:hover, :root[data-theme="light"] .help-menu a:focus-visible { background: #f7f5f2; }
+
+/* Live light-mode row hover actions. */
+:root[data-theme="light"] .row-hover-actions {
+  right: 0;
+  bottom: 1px;
+  background: #fff;
+}
+:root[data-theme="light"] .row-hover-action {
+  background: #fff;
+  color: #1a1918;
+}
+:root[data-theme="light"] .row-hover-action:hover,
+:root[data-theme="light"] .row-hover-action:focus-visible {
+  background: #f7f5f2;
+}
+
+/* Light row-action surface from the live reference. */
+:root[data-theme="light"] .row-hover-action {
+  background: #f7f5f2;
+  color: #1a1918;
+}
+:root[data-theme="light"] .row-hover-action:hover,
+:root[data-theme="light"] .row-hover-action:focus-visible {
+  background: #e7e4e1;
+}
+
+/* Live row-action medium control sizing. */
+:root[data-theme="light"] .row-hover-action {
+  height: 32px;
+  border-radius: 8px;
+  padding: 0 8px;
+  font: 500 14px/20px "Atlas Grotesk Web", Atlas, Arial, sans-serif;
+}
+:root[data-theme="light"] .row-hover-action svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Preserve light-mode borders during hover. */
+:root[data-theme="light"] .row-hover-actions {
+  height: auto;
+  bottom: 1px;
+}
+:root[data-theme="light"] [data-action="download"],
+:root[data-theme="light"] [data-action="copy-link"] {
+  border-color: rgba(0, 0, 0, .14);
+}
+:root[data-theme="light"] [data-action="download"]:hover,
+:root[data-theme="light"] [data-action="download"]:focus-visible,
+:root[data-theme="light"] [data-action="copy-link"]:hover,
+:root[data-theme="light"] [data-action="copy-link"]:focus-visible {
+  background: #f7f5f2;
+  border-color: rgba(0, 0, 0, .14);
+}

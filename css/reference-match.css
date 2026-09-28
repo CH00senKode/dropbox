@@ -1,0 +1,44 @@
+/* Exact desktop measurements taken from the supplied Dropbox shared-folder page. */
+@media (min-width: 641px) {
+  .topbar { background: #1a1918; padding: 0 16px; }
+  .top-actions { gap: 0; transform: translateY(-.5px); }
+  .icon-button { margin-right: 8px; }
+  .account-button { box-sizing: border-box; justify-content: center; border-radius: 8px; padding: 0; margin-left: 8px; font: 500 13px Sharp, "Atlas Grotesk Web", Atlas, Arial, sans-serif; }
+  .login { width: 65.09375px; background: rgba(255, 255, 255, .1); }
+  .signup { width: 74.390625px; }
+  .brand svg { width: 27px; height: 32px; transform: translateY(-2px); }
+
+  .rocket { margin: 4px; }
+  .share-banner { position: relative; height: 48.3125px; min-height: 48.3125px; gap: 8px; }
+  .share-banner > span { align-self: center; line-height: 24px; }
+  .banner-login { align-self: center; display: block; width: 41.09375px; height: 24px; margin-left: 0; font: 500 13px/24px Sharp, "Atlas Grotesk Web", Atlas, Arial, sans-serif; }
+  .banner-signup { align-self: center; box-sizing: border-box; display: flex; align-items: center; width: 74.390625px; height: 32px; margin-left: 0; padding: 0 12px; font: 500 13px Sharp, "Atlas Grotesk Web", Atlas, Arial, sans-serif; border-color: #5b5650; }
+  .banner-close { position: absolute; top: 8px; right: 4px; display: grid; place-items: center; width: 32px; height: 32px; margin: 0; padding: 0; }
+
+  .action-card { border: 0; gap: 12px; padding: 12px; font-weight: 400; }
+  .action-card .card-icon { height: 24px; }
+  .card-icon svg { width: 24px; height: 24px; }
+  .action-card.dark { height: 78px; background: #1a1918; border: 1px solid rgba(255, 255, 255, .14); color: #fff; }
+  .folder-area { margin-top: 0; }
+
+  .folder-heading { position: relative; }
+  .folder-heading h1 { flex: 0 1 auto; width: calc(100% - 50px); min-width: 0; }
+  .view-toggle { position: absolute; top: 20px; right: 0; width: 48px; border: 0; background: transparent; }
+
+  .table-head, .file-row { grid-template-columns: calc(50% - 16px) calc(30% - 10px) calc(20% - 6px) 32px; align-items: stretch; }
+  .table-head { height: 38.5px; }
+  .table-head > button { display: flex; align-items: center; height: 100%; padding: 8px 16px; font: 500 14px/22px "Atlas Grotesk Web", Atlas, Arial, sans-serif; }
+  .table-head > button span { font-size: 16px; }
+  .file-row > span { display: flex; align-items: center; min-width: 0; height: 81px; padding: 16px; }
+  .file-name a { display: flex; align-items: center; gap: 16px; width: 100%; height: 48px; }
+  .folder-icon { display: grid; place-items: center; flex: none; width: 48px; height: 48px; padding: 0; fill: none; }
+  .folder-icon svg { width: 30px; height: 26px; }
+
+  :root[data-theme="dark"] body { color: #fff; }
+  :root[data-theme="dark"] .action-card.dark { border-color: rgba(255, 255, 255, .14); color: #fff; }
+  :root[data-theme="dark"] .table-head button { color: #bbb5ae; }
+  :root[data-theme="dark"] .table-head span { color: #bbb5ae; }
+  :root[data-theme="dark"] .file-name a { color: #488eff; }
+  :root[data-theme="dark"] .file-row > span:not(.file-name) { color: #fff; }
+  :root[data-theme="dark"] .view-toggle { background: transparent; border-color: transparent; color: #fff; }
+}
